@@ -3,8 +3,12 @@
     width: 1000px;
     height: 1000px;
     display: flex;
-    /* flex-direction: row-reverse; */
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+    /* justfy content altera os elementos na horizontal, porém se eu alterar o flex directionpara collumn/collunreverse, 
+    ele alterara os elementos na vertical */
+    /* flex-direction: ; */
+    /* justify-content: space-between; */
 }
 
 .box {
