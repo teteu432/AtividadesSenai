@@ -1,9 +1,9 @@
 const idade = 17;
 
-if( idade >= 18){
-console.log("Maior de idade")
+if (idade >= 18) {
+    console.log("Maior de idade")
 }
-else{
+else {
     console.log("Menor de idade")
 }
 
@@ -26,10 +26,10 @@ const idade2 = 20
 const temDoc = true
 const taNalista = true
 
-if(idade2 >= 18 && temDoc && taNalista){
-console.log("Pode entrar")
+if (idade2 >= 18 && temDoc && taNalista) {
+    console.log("Pode entrar")
 }
-else{
+else {
     console.log("Não pode entrar")
 }
 
@@ -39,9 +39,9 @@ const temDinheiro = false;
 const temCartao = true;
 const temPix = false;
 
-if(temDinheiro || temPix || temCartao ){
+if (temDinheiro || temPix || temCartao) {
     console.log("Pode pagar")
-}else{
+} else {
     console.log("Negado")
 }
 
@@ -120,13 +120,13 @@ if(Number.isNaN(temp)){
     alert("ta calor demais bixu!")
 }
 
-*/
+
 
 const vermelho = "vermelho"
 const verde = "verde"
 const amerelo = "amerelo"
 
-const corFarol = prompt("Qual a cor do farol? ")
+const corFarol = prompt("Qual a cor do farol? ").toLowerCase().trim();
 
 if (corFarol === verde){
     alert("Prossiga")
@@ -137,3 +137,35 @@ if (corFarol === verde){
 } else{
     alert("inválido!")
 }
+*/
+//Calculadora de IMC Validada
+
+const altura = Number(prompt("Qual sua altura? digite apenas numero"))
+const peso = Number(prompt("Qual o seu peso?"))
+const calImc = (peso / (altura * altura)).toFixed(2)
+
+
+if (Number.isNaN(peso) || Number.isNaN(altura)) {
+    alert("Digite apenas numeros")
+} else if (peso <= 0 || altura <= 0) {
+    alert("Peso e altura devem ser positivos")
+}
+else if (altura > 3) {
+    alert("Voce é uma girafa?")
+}
+else {
+    if (calImc < 18.5) {
+        alert("Seu IMC é: " + calImc)
+        alert("Ta magrelo")
+
+    } else if (calImc < 25 && calImc >= 18.5) {
+        alert("Seu IMC é: " + calImc)
+        alert("Ta suave")
+    } else if (calImc > 30) {
+        alert("Seu IMC é: " + calImc)
+        alert("ta imenso")
+    }
+}
+
+
+
