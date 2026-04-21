@@ -142,7 +142,7 @@ if (corFarol === verde){
 
 const altura = Number(prompt("Qual sua altura? digite apenas numero"))
 const peso = Number(prompt("Qual o seu peso?"))
-const calImc = (peso / (altura * altura)).toFixed(2)
+const calImc = (peso / (altura * altura))
 
 
 if (Number.isNaN(peso) || Number.isNaN(altura)) {
@@ -155,14 +155,14 @@ else if (altura > 3) {
 }
 else {
     if (calImc < 18.5) {
-        alert("Seu IMC é: " + calImc)
+        alert("Seu IMC é: " + calImc.toFixed(2))
         alert("Ta magrelo")
 
     } else if (calImc < 25 && calImc >= 18.5) {
-        alert("Seu IMC é: " + calImc)
+        alert("Seu IMC é: " + calImc.toFixed(2))
         alert("Ta suave")
     } else if (calImc > 30) {
-        alert("Seu IMC é: " + calImc)
+        alert("Seu IMC é: " + calImc.toFixed(2))
         alert("ta imenso")
     }
 }
