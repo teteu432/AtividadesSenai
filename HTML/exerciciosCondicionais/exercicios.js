@@ -20,7 +20,7 @@ if (verificando >= 0) {
 
 //Aprovação em uma prova:
 
-const prova = Number(prompt("Digite a nota: "))
+const prova = Number(prompt("Digite a nota 0-100: "))
     
 if (prova >= 60) {
     alert("Aprovado!")
@@ -30,7 +30,7 @@ if (prova >= 60) {
 
 //Verificar se um número é positivo, negativo ou zero:
 
-const numero = Number("Digite um numero: ");
+const numero = Number(prompt("Digite um numero para verificar se é 0, positivo ou negativo: "));
 
 if (numero === 0) {
     alert("Este numero é 0!")
@@ -199,3 +199,4 @@ else {
         alert("ta imenso")
     }
 }
+
