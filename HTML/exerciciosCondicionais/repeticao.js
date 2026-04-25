@@ -91,7 +91,7 @@ do {
     }
 } while (option !== "0");
 
-*/
+
 
 //jogo: adivinhe um numero
 
@@ -102,14 +102,14 @@ const numeroSecreto = Math.floor(Math.random() * 10) +1;
 // + 1 0 = 1 - 10
 let palpite;
 let tentativa = 0;
-alert("Adivinhe um numero");
+alert("Adivinhe um numero de 1-10");
 
 do {
     palpite = Number(prompt("Seu palpite: "))
     tentativa++
     if (Number.isNaN(palpite)) {
         alert("Digite apenas numeros válidos")
-    } else if (Palpite < numeroSecreto) {
+    } else if (palpite < numeroSecreto) {
         alert("Muito baixo, tente novamente")
     }else if (palpite > numeroSecreto){
         alert("muito alto")
@@ -118,3 +118,121 @@ do {
     }
 } while (palpite !== numeroSecreto);
 
+//for
+console.log("Contando de 1 a 10: \n")
+for (let i = 1; i <= 10; i++) {
+    console.log(`Número: ${i}`)
+    console.log("------------")
+}
+
+const numero = Number(prompt("Tabuada de qual numero? "))
+if (Number.isNaN(numero)) {
+    console.log("Número invalido")
+} else {
+    console.log(`\n Tabuada do ${numero}\n`)
+
+    for(let i = 1; i <= 10; i++){
+        const resultado = numero * i;
+        console.log(`${numero} x ${i} = ${resultado}`)
+        alert(`${numero} x ${i} = ${resultado}`)
+    }
+}
+
+//numeros pares(0-20)
+
+let par = 0
+for(let i = 0; i <= 20; i+=2){
+    console.log(i);
+}   
+
+//contagem regressiva
+for(let i = 10; i >= 0; i--){
+    console.log(i);
+}   
+
+//Piramide
+const altura = 5;
+for (let linha = 1; linha <= altura; linha++) {
+    let asteriscos = "";
+
+    for(let i = 1; i <= linha; i++){
+        asteriscos += "* ";
+    }
+    console.log(asteriscos)
+
+// array = lista
+
+const frutas = ["Maçã", "Banana", "Laranja", "Uva"];
+console.log(frutas[0])
+console.log(frutas[1])
+console.log(frutas[2])
+console.log(frutas[3]);
+console.log(frutas.length);
+console.log(frutas[1].length);
+
+
+//for of
+
+for (const fruta of frutas) {
+    console.log("----------")
+    console.log(`-${fruta}`)
+}
+
+//soma de todos os numeros do array
+const numeros = [10, 25, 8, 42, 15, 7]
+let soma = 0
+for (const numero of numeros) {
+    soma += numero
+    console.log(soma)
+}
+
+//Objetos
+
+const pessoa = {
+    nome: "Mateus",
+    idade: 35,
+    cidade: "Mauá",
+    profissao: "Tecnico de refrigeração"
+}
+
+console.log(pessoa.cidade)
+console.log(pessoa["idade"])
+
+//for in
+
+for(const chave in objeto){
+
+}
+
+const aluno = {
+    nome: "Mateus da Silva",
+    matricula: "202220",
+    curso: "DEV WEB",
+    nota: 9.5
+};
+
+console.log("\nDados do aluno");
+for (const chave in aluno) {
+    const valor = aluno[chave]
+        console.log(`${chave}: ${valor}`)
+    }
+*/
+
+//Estoque de produtos
+
+const estoque = {
+    "Notebook": 10,
+    "Mouse": 20,
+    "teclado": 30,
+    "monitor": 8,
+    "Webcam": 22,
+}
+
+for (const chave in estoque) {
+    const quantidade = estoque[chave]
+   if (quantidade <10 ) {
+    console.log("Precisa comprar")
+   } else {
+    console.log(`${chave} Quantidade: ${quantidade}`)
+   }
+}
