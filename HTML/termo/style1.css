@@ -5,42 +5,118 @@
   font-family: cursive;
 }
 
-
 body {
-  flex-direction: column;
-  
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: #FFF36E;
+  gap: 20px;
+  padding: 20px;
 }
 
-main{
+main {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.game{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.linha{
-    display: flex;
-    flex-direction: row;
+.linha {
+  display: flex;
 }
 
 button[data-i] {
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
+  width: 80px;
+  height: 80px;
+  border: 2px solid black;
   background-color: rgb(90, 73, 73);
+  color: white;
   cursor: pointer;
   margin: 3px;
   border-radius: 5px;
-  font-size: 40px;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+.regras {
+  width: 700px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.regras p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.verde {
+  color: green;
+  font-weight: bold;
+}
+
+.amarelo {
+  color: goldenrod;
+  font-weight: bold;
+}
+
+.cinza {
+  color: black;
+  font-weight: bold;
+}
+
+.correta {
+  background-color: green !important;
+}
+
+.existe {
+  background-color: goldenrod !important;
+}
+
+.errada {
+  background-color: black !important;
+}
+
+/* ========================= */
+/* CELULAR */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .regras {
+    width: 95%;
+    font-size: 14px;
+  }
+
+  .regras p {
+    font-size: 14px;
+  }
+
+  button[data-i] {
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+    margin: 2px;
+  }
+
+  .linha {
+    gap: 2px;
+  }
+
+  body {
+    padding: 10px;
+  }
 }
